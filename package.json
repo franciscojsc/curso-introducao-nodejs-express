@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/franciscojsc/introducao_node_js#readme",
   "dependencies": {
+    "ejs": "^2.6.1",
     "express": "^4.16.4"
   },
   "devDependencies": {
