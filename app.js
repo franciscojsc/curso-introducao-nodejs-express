@@ -1,39 +1,19 @@
 var http = require('http');
+var fs = require('fs');
 
 var server = http.createServer(function(req, res) {
     var pagina = req.url;
     console.log(pagina);
 
     if(pagina == '/contato'){
-        res.end(`
-        <!DOCTYPE html>
-        <html>
-            <head>
-                <meta charset="utf-8">
-                <title>
-                    Introdução ao Node JS
-                </title>
-            </head>
-            <body>
-                <h1>Página de Contato</h1>
-            </body>
-        </html>
-        `);
+        fs.readFile( `${__dirname}/site/${pagina}.html`, function(err, html){
+            res.end(html);
+        });
+        
     } else {
-        res.end(`
-        <!DOCTYPE html>
-        <html>
-            <head>
-                <meta charset="utf-8">
-                <title>
-                    Introdução ao Node JS
-                </title>
-            </head>
-            <body>
-                <h1>Página de Home</h1>
-            </body>
-        </html>
-        `);
+        fs.readFile( `${__dirname}/site/${pagina}.html`, function(err, html){
+            res.end(html);
+        });
     }
     
 });
