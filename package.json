@@ -1,0 +1,26 @@
+{
+  "name": "introducao_node_js",
+  "version": "1.0.0",
+  "description": "Conhecendo o NodeJS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franciscojsc/introducao_node_js.git"
+  },
+  "keywords": [
+    "node",
+    "introdução",
+    "javascript",
+    "http",
+    "express"
+  ],
+  "author": "Francisco Chaves",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/franciscojsc/introducao_node_js/issues"
+  },
+  "homepage": "https://github.com/franciscojsc/introducao_node_js#readme"
+}
