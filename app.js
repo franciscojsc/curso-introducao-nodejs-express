@@ -2,7 +2,7 @@ var express = require('express');
 
 var meuModulo = require('./modulo_extreno');
 
-console.log(meuModulo);
+console.log(meuModulo());
 
 var app = express();
 
