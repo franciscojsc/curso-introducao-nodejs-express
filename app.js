@@ -1,12 +1,4 @@
-var express = require('express');
-
-var meuModulo = require('./modulo_extreno');
-
-console.log(meuModulo());
-
-var app = express();
-
-app.set('view engine', 'ejs');
+var app = require('./config/server');
 
 app.get('/contato', function(req, res) {
     res.render('site/contato');
