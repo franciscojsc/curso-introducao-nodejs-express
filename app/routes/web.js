@@ -7,8 +7,9 @@ module.exports = function(app) {
     });
     
     app.get('/', function(req, res) {
-        var listaClientes = clienteModels.all();
-        res.render('site/index', {clientes: listaClientes});
+        clienteModels.all(function(error, resultado) {
+            res.render('site/index', {clientes: resultado});
+        });
     });
     
 }
