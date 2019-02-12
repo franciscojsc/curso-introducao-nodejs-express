@@ -10,5 +10,13 @@
     <h1>Home</h1>
     <% var texto = "tabalhando com EJS"; %>
     <p><%= texto %></p>
+
+    <ul>
+        <% for(var chave in clientes){ %>
+            <li>
+                <%= clientes[chave].nome %> - <%= clientes[chave].email %>
+            </li>
+        <% } %>
+    </ul>
 </body>
 </html>
