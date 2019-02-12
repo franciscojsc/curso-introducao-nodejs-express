@@ -1,11 +1,17 @@
-var express = require('express');
+module.exports = function() {
 
-var app = express();
+    var express = require('express');
 
-app.set('view engine', 'ejs');
-app.set('views', './app/views');
+    var app = express();
+    
+    app.set('view engine', 'ejs');
+    app.set('views', './app/views');
+    
+    var rotas = require('../app/routes/web');
+    rotas(app);
 
-var rotas = require('../app/routes/web');
-rotas(app);
-
-module.exports = app;
+    app.listen(3000, function(){
+        console.log('listening: http://localhost:3000');
+    });
+    
+};
