@@ -10,4 +10,7 @@ module.exports = function(app) {
         clienteController.index(req, res);
     });
     
+    app.get('/detalhe/:id', function(req, res) {
+        clienteController.show(req, res);
+    });
 }

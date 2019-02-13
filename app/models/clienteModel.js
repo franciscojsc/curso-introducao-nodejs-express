@@ -10,6 +10,13 @@ module.exports = function() {
 
     };
 
+    this.find = function(id, callback) {
+
+        var con = db();
+
+        con.query('select * from clientes where id = ?', id, callback);
+    }
+
     return this;
 
 };
