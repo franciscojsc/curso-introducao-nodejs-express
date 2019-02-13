@@ -1,4 +1,4 @@
-var clienteModels = require('../models/clienteModel')();
+var clienteController = require('../controllers/clienteController');
 
 module.exports = function(app) {
 
@@ -7,9 +7,7 @@ module.exports = function(app) {
     });
     
     app.get('/', function(req, res) {
-        clienteModels.all(function(error, resultado) {
-            res.render('site/index', {clientes: resultado});
-        });
+        clienteController.index(req, res);
     });
     
 }
