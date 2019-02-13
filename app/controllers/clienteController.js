@@ -6,8 +6,27 @@ module.exports.index = function(req, res) {
     });
 };
 
-module.exports.store = function() {
+module.exports.store = function(req, res) {
 
+    var dados = req.body;
+
+    clienteModels.save(dados, function(error, resultado) {
+        try{
+
+            if(!error){
+                throw "Erro ao adicionar o cliente";
+            }
+
+       }catch(ex) {
+
+            console.error(ex);
+
+       }finally{
+
+        res.redirect('/');
+
+       }
+    });
 };
 
 module.exports.show = function(req, res) {
