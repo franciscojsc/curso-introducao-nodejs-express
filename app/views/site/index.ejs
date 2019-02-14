@@ -10,10 +10,18 @@
     <h1>Home</h1>
     <% var texto = "tabalhando com EJS"; %>
     <p><%= texto %></p>
+    
+    <%if(erros){%>
+    <ul>
+        <%for(var key in erros){%>
+        <li style="color: red"><%= erros[key].msg %></li>
+        <%}%>
+    </ul>
+    <%}%>
 
     <form action="/" method="POST">
-        <input type="text" name="nome" placeholder="Nome">
-        <input type="email" name="email" placeholder="E-mail">
+        <input type="text" name="nome" placeholder="Nome" value="<%= dados.nome %>">
+        <input type="email" name="email" placeholder="E-mail" value="<%= dados.email %>">
         <button>Adicionar</button>
     </form>
 
